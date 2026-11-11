@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    
+    University Student Information Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Masinde Muliro University of Science and Technology</h1>
+    <h2>Student Information Portal</h2>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#registration">Student Registration</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+       <section id="about">
+  <h2>About the Portal</h2>
+  <p>
+    The Student Information Portal is an online platform that allows students
+    of Masinde Muliro University of Science and Technology to register,
+    access their academic records, and view important university information
+    in one convenient place.
+  </p>
+
+  <h3>Academic Programmes Offered</h3>
+  <ul>
+    <li>Bachelor of Science in Computer Science</li>
+    <li>Bachelor of Education (Science)</li>
+    <li>Bachelor of Science in Nursing</li>
+    <li>Bachelor of Commerce</li>
+  </ul>
+</section>
+
+<section id="students">
+  <h2>Student Information</h2>
+  <table border="1">
+    <caption>Registered Students</caption>
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Registration Number</th>
+        <th>Programme</th>
+        <th>Year of Study</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>Victor musyoka</td>
+        <td>COM/B/01-00122/2025</td>
+        <td>Computer Science</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>Erick Barasa</td>
+        <td>COM/B/01-00128/2025</td>
+        <td>Computer science</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>Cornelius Onyango</td>
+        <td>COM/B/01-00124/2025</td>
+        <td>Computer science</td>
+        <td>2</td>
+      </tr>
+         
+    </tbody>
+  </table>
+</section>
+     <section id="registration">
+  <h2>Student Registration</h2>
+  <form action="#" method="post" novalidate>
+
+    <p>
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+    </p>
+
+    <p>
+      <label for="regno">Registration Number:</label>
+      <input type="text" id="regno" name="regno" required>
+    </p>
+
+    <p>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+    </p>
+
+    <p>
+      Gender:
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+    </p>
+
+    <p>
+      <label for="programme">Academic Programme:</label>
+      <select id="programme" name="programme">
+        <option value="">-- Select Programme --</option>
+        <option value="cs">BSc Computer Science</option>
+        <option value="edu">Bachelor of Education (Science)</option>
+        <option value="nursing">BSc Nursing</option>
+        <option value="commerce">Bachelor of Commerce</option>
+      </select>
+    </p>
+
+    <p>
+      <input type="submit" value="Register">
+      <input type="reset" value="Reset">
+    </p>
+  
+  </form>
+  <p id="errorMessage"></p>
+  <div id="output"></div>
+<p id="successMessage"></p>
+</section>
+<script src="script.js"></script>
+</body>
+</html>

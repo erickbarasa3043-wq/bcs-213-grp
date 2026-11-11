@@ -1,0 +1,154 @@
+/* ===== style.css ===== */
+
+/* a) Background colours, font styles and text formatting (2 marks) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f7fb;
+  color: #333333;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1f3a5f;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #1f3a5f;
+  font-weight: bold;
+  border-bottom: 2px solid #1f3a5f;
+  padding-bottom: 5px;
+}
+
+p {
+  text-align: justify;
+}
+
+footer {
+  background-color: #1f3a5f;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* b) Horizontal navigation menu with hover effect (2 marks) */
+nav {
+  background-color: #2c5282;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;              /* links side by side */
+  justify-content: center;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  padding: 14px 22px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #f6ad55;  /* hover effect */
+  color: #1a202c;
+}
+
+/* c) Student information table: borders, padding, spacing (1 mark) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #ffffff;
+}
+
+th, td {
+  border: 1px solid #1f3a5f;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f3a5f;
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #eaf0f8;
+}
+
+/* d) Page layout using Flexbox (1 mark) */
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+main {
+  flex: 3;                    /* main content takes more space */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+aside {
+  flex: 1;                    /* sidebar */
+  background-color: #e2e8f0;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* e) Media query for smaller screens (1 mark) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;   /* stack menu links vertically */
+  }
+
+  nav a {
+    text-align: center;
+    border-bottom: 1px solid #1f3a5f;
+  }
+
+  .container {
+    flex-direction: column;   /* stack main content and sidebar */
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 6px 8px;
+  }
+}
